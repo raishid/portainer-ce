@@ -6,7 +6,7 @@ services:
     ports:
       - "${PORT}:9000"
     volumes:
-      - data:/data
+      - data_portainer:/data
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
 volumes:
