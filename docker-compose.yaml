@@ -4,10 +4,10 @@ services:
     image: portainer/portainer-ce:latest
     privileged: true
     ports:
-      - "{PORT}:9443"
-      volumes:
-        - data:/data
-        - /var/run/docker.sock:/var/run/docker.sock
+      - "${PORT}:9000"
+    volumes:
+      - data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
 volumes:
   data_portainer:
