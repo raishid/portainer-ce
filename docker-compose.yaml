@@ -4,7 +4,7 @@ services:
     image: portainer/portainer-ce:latest
     privileged: true
     ports:
-      - ${PORT}:9443
+      - "{PORT}:9443"
       volumes:
         - data:/data
         - /var/run/docker.sock:/var/run/docker.sock
